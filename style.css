@@ -1,0 +1,98 @@
+:root{
+    --backg: #1e1e1e;
+    --card-backg: #2b2b2b;
+    --input-backg: #101010;
+    --text: #f2f2f2;
+    --btn-backg: #3a3a3a;
+    --btn-hover: #4a4a4a;
+    --accent: #ff9500;
+    --danger: #a5a5a5;
+    --success: #34c759;
+    --font: 'Courier New', monospace;
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--backg);
+    font-family: var(--font);
+}
+.todo-app{
+    background: var(--card-backg);
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;  
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.todo-app h1{
+    color: var(--text);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.input-row{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+#taskInput{
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: var(--input-backg);
+    color: var(--text);
+    font-family: var(--font);
+}
+.input-row button{
+    background: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-family: var(--font);
+    cursor: pointer;
+}
+.input-row button:hover{
+    background: #ffb143;
+}
+#taskList{
+    list-style: none;
+}
+#taskList li{
+    background: var(--btn-backg);
+    color: var(--text);
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#taskList li span.done{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+#taskList li.done .delete-btn{
+    text-decoration: none;
+    opacity: 1;
+}
+.delete-btn{
+    background: var(--danger);
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;    
+}
+button{
+    transition: background 0.4s ease;
+}
